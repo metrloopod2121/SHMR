@@ -81,6 +81,7 @@
 		0D2926E62C231D520079272E /* To Do App */ = {
 			isa = PBXGroup;
 			children = (
+				0D2926F52C24C0000079272E /* data.json */,
 				0D2926E72C231D520079272E /* To_Do_AppApp.swift */,
 				0D2926E92C231D520079272E /* ContentView.swift */,
 				0D2926F72C24C7870079272E /* Model */,
@@ -136,7 +137,6 @@
 		0D2927102C25ABA00079272E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D2926F52C24C0000079272E /* data.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";

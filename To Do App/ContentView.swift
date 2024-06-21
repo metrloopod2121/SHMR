@@ -17,12 +17,11 @@ struct ContentView: View {
             Button(
                 action: {
                     let someCache = FileCache()
-                    var newItem1 = ToDoItem(id: "1", text: "buy milk")
-                    print(newItem1.json)
-                    var newItem2 = ToDoItem(id: "2", text: "buy eggs")
+                    let newItem1 = ToDoItem(id: "1", text: "buy milk")
+                    let newItem2 = ToDoItem(id: "2", text: "buy eggs")
                     someCache.addItem(newItem: newItem1)
                     someCache.addItem(newItem: newItem2)
-                    someCache.save(to: "data")
+                    someCache.saveData(to: "data")
 //                    print(someCache.ToDoItems)
                     
                 }, label: {

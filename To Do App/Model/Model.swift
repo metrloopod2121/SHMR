@@ -76,10 +76,10 @@ class FileCache {
             return nil
         }
     }
-    
+
     ///____________________
     
-    func save(to fileName: String) {
+    func saveData(to fileName: String) {
         
         // Массив строк, которые нужно сохранить в файл
         var jsonOfItems: [String] = []
@@ -89,54 +89,42 @@ class FileCache {
             if let jsonString = jsonToString(from: values.json) {
                 jsonOfItems.append(jsonString)
             } else {
-                print("Ошибка: Невозможно преобразовать элемент в JSON строку.")
+                print("Ошибка - Невозможно преобразовать элемент в JSON строку")
                 return
             }
         }
         
-        // Получаем URL директории проекта (это корневая директория проекта)
-        guard let projectDirectory = URL(string: FileManager.default.currentDirectoryPath) else {
-            print("Ошибка: Не удалось получить URL директории проекта.")
-            return
-        }
+        // Получаем URL текущей директории проекта
+        let currentDirectoryPath = FileManager.default.currentDirectoryPath
         
         // Создаем URL для файла в папке проекта
-        let fileURL = projectDirectory
-            .appendingPathComponent(fileName)
-            .appendingPathExtension("json")
+        let filePath = (currentDirectoryPath as NSString).appendingPathComponent(fileName + ".json")
+        
+        // Используем URL для файла
+        let fileURL = URL(fileURLWithPath: filePath)
         
         // Объединяем все JSON строки в один JSON массив
         let jsonArrayString = "[" + jsonOfItems.joined(separator: ",\n") + "]"
+        print(jsonArrayString)
         
         // Преобразуем строку в данные
         guard let data = jsonArrayString.data(using: .utf8) else {
-            print("Ошибка: Невозможно преобразовать JSON строку в данные.")
+            print("Ошибка - Невозможно преобразовать JSON строку в данные.")
             return
         }
         
-        // Проверяем, существует ли файл
-        if FileManager.default.fileExists(atPath: fileURL.path) {
-            // Удаляем файл, если он уже существует
-            do {
-                try FileManager.default.removeItem(at: fileURL)
-            } catch {
-                print("Ошибка: Не удалось удалить существующий файл \(fileURL.path).")
-                return
+        do {
+            // Получаем URL каталога Documents
+            if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                let fileURL = documentsDirectory.appendingPathComponent("data.json")
+                try data.write(to: fileURL)
+                print("Данные успешно записаны по пути: \(fileURL)")
             }
+        } catch {
+            print("Ошибка записи данных в файл: \(error)")
         }
         
-        // Пишем данные в файл
-        let success = FileManager.default.createFile(atPath: fileURL.path, contents: data, attributes: nil)
-        
-        if success {
-            print("Файл успешно сохранен по пути: \(fileURL.path)")
-        } else {
-            print("Ошибка записи в файл.")
-        }
     }
-    
-    
-
     
     
     func loadData() {
