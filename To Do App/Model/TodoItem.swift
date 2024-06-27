@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  TodoItem.swift
 //  To Do App
 //
 //  Created by 𝕄𝕒𝕥𝕧𝕖𝕪 ℙ𝕠𝕕𝕘𝕠𝕣𝕟𝕚𝕪 on 20.06.2024.
@@ -7,21 +7,36 @@
 
 import Foundation
 
-struct ToDoItem {
+struct TodoItem: Identifiable {
     
-    enum Importance: String {
-        case unimportant = "Неважно"
-        case regular = "Обычная"
-        case important = "Важно"
+//    enum Importance: String {
+//        case unimportant = "Неважно"
+//        case regular = "Обычная"
+//        case important = "Важно"
+//    }
+    
+    enum Importance: String, CaseIterable, Identifiable {
+        case unimportant = "arrow.down"
+        case regular = "нет"
+        case important = "exclamationmark.2"
+        
+        var id: String { self.rawValue }
+        var displayName: String {
+            switch self {
+            case .unimportant: return "Low"
+            case .regular: return "Medium"
+            case .important: return "High"
+            }
+        }
     }
     
     let id: String
     let text: String
     let importance: Importance
     let createDate: Date
-    let isComplete: Bool
+    var isComplete: Bool
     let changeDate: Date?
-    let deadline: Date?
+    var deadline: Date?
     
     init(
         id: String = UUID().uuidString,
@@ -35,7 +50,7 @@ struct ToDoItem {
         self.id = id
         self.text = text
         self.importance = importance
-        self.createDate = Date()
+        self.createDate = createDate
         self.isComplete = isComplete
         self.changeDate = changeDate
         self.deadline = deadline
