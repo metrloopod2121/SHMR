@@ -13,16 +13,16 @@ class FileCache: ObservableObject {
     
     @Published private(set) var todoItems: [String: TodoItem] = [:]
     
+    var countOfCompletedTasks: Int {
+        return todoItems.values.filter { $0.isComplete }.count
+    }
+    
     func addItem(newItem: TodoItem) {
         todoItems[newItem.id] = newItem
     }
     
     func removeItem(by id: String) {
         todoItems.removeValue(forKey: id)
-    }
-    
-    func saveItem(id: String, updatedItem: TodoItem) {
-        todoItems[id] = updatedItem
     }
     
     func toggleComplete(for id: String) {

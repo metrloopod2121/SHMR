@@ -15,16 +15,21 @@ struct AddItemView: View {
     @State private var deadlineEnabled = false
     @State private var showDatePicker = false
     @State private var deadline = Date()
-    @State private var selectedPriority: TodoItem.Importance = .unimportant // Добавляем состояние для выбранного приоритета
+    @State private var selectedPriority: TodoItem.Importance = .unimportant
+    @State private var selectedColor = Color.blue // Default color
 
+    
     
     var body: some View {
         NavigationView {
             Form {
-                Section {
+                HStack {
                     TextField("Что нужно сделать?", text: $newItemText, axis: .vertical)
                         .font(.title3)
                         .lineLimit(3, reservesSpace: true)
+                    Color(selectedColor)
+                                .frame(width: 5, height: 100)
+                                .cornerRadius(2.5)
                 }
                 
                 Section {
@@ -33,10 +38,10 @@ struct AddItemView: View {
                         Spacer()
                         Picker("Важность", selection: $selectedPriority) {
                             Image(systemName: TodoItem.Importance.unimportant.rawValue)
-                            .tag(TodoItem.Importance.unimportant)
+                                .tag(TodoItem.Importance.unimportant)
                             
                             Text("нет")
-                            .tag(TodoItem.Importance.regular)
+                                .tag(TodoItem.Importance.regular)
                             
                             Image(systemName: TodoItem.Importance.important.rawValue)
                                 .symbolRenderingMode(.palette)
@@ -46,11 +51,11 @@ struct AddItemView: View {
                         .pickerStyle(SegmentedPickerStyle())
                         .scaledToFit()
                     }
-
+                    
                     Toggle(isOn: $deadlineEnabled) {
                         VStack(alignment: .leading) {
                             Text("Сделать до")
-
+                            
                             if deadlineEnabled {
                                 Text(formatDate(deadline))
                                     .font(.caption)
@@ -72,16 +77,26 @@ struct AddItemView: View {
                             showDatePicker = false
                         }
                     }
-
+                    
+                    
                     if deadlineEnabled && showDatePicker {
                         DatePicker("Выберите дату", selection: $deadline, displayedComponents: .date)
                             .datePickerStyle(GraphicalDatePickerStyle())
+                            .opacity(showDatePicker ? 1 : 0) // Начальное значение прозрачности
+                            .offset(x: showDatePicker ? 0 : UIScreen.main.bounds.width, y: 0) // Выезжание справа
                     }
-                
-
+                    
+                    
                 }
+                
+                Section {
+                    Section(header: Text("Цвет")) {
+                        ColorPicker(selectedColor.hexComponents(), selection: $selectedColor, supportsOpacity: false)
+                    }
+                }
+                
                 Button("Удалить") {
-                    fileCache.removeItem(by: newTask.id)
+                    presentationMode.wrappedValue.dismiss()
                 }
                 .foregroundStyle(.red)
                 .font(.system(size: 17))
@@ -97,38 +112,31 @@ struct AddItemView: View {
                 }
             }
             .navigationBarItems(
-                leading: Button("Отмена") {
+                leading: Button("Отменить") {
                     presentationMode.wrappedValue.dismiss()
                 },
-                trailing: Button("Добавить") {
+                trailing: Button("Сохранить") {
                     guard !newItemText.isEmpty else { return }
                     
                     var newTask = TodoItem(
                         text: newItemText,
                         importance: selectedPriority,
                         createDate: Date(),
-                        isComplete: false
+                        isComplete: false,
+                        color: selectedColor
                     )
                     
                     if deadlineEnabled {
                         newTask.deadline = deadline
                     }
-
+                    
                     fileCache.addItem(newItem: newTask)
                     presentationMode.wrappedValue.dismiss()
-                }
+                }.fontWeight(.bold)
             )
         }
     }
-    
 
-    
-    func addTask() {
-        guard !newItemText.isEmpty else { return }
-        let newTask = TodoItem(text: newItemText, createDate: Date(), isComplete: false)
-        fileCache.addItem(newItem: newTask)
-        presentationMode.wrappedValue.dismiss()
-    }
     
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()

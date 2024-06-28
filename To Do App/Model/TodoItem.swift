@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct TodoItem: Identifiable {
     
@@ -21,22 +22,23 @@ struct TodoItem: Identifiable {
         case important = "exclamationmark.2"
         
         var id: String { self.rawValue }
-        var displayName: String {
-            switch self {
-            case .unimportant: return "Low"
-            case .regular: return "Medium"
-            case .important: return "High"
-            }
-        }
+//        var displayName: String {
+//            switch self {
+//            case .unimportant: return "Low"
+//            case .regular: return "Medium"
+//            case .important: return "High"
+//            }
+//        }
     }
     
     let id: String
-    let text: String
-    let importance: Importance
+    var text: String
+    var importance: Importance
     let createDate: Date
     var isComplete: Bool
-    let changeDate: Date?
+    var changeDate: Date?
     var deadline: Date?
+    var color: Color
     
     init(
         id: String = UUID().uuidString,
@@ -45,7 +47,8 @@ struct TodoItem: Identifiable {
         createDate: Date = Date(),
         isComplete: Bool = false,
         changeDate: Date? = nil,
-        deadline: Date? = nil
+        deadline: Date? = nil,
+        color: Color = .blue
     ) {
         self.id = id
         self.text = text
@@ -54,6 +57,7 @@ struct TodoItem: Identifiable {
         self.isComplete = isComplete
         self.changeDate = changeDate
         self.deadline = deadline
+        self.color = color
     }
     
 }

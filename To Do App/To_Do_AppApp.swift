@@ -22,6 +22,7 @@ struct To_Do_AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .background(Color.gray)
         }
     }
 }
