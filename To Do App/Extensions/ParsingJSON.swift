@@ -4,54 +4,50 @@
 //
 //  Created by 𝕄𝕒𝕥𝕧𝕖𝕪 ℙ𝕠𝕕𝕘𝕠𝕣𝕟𝕚𝕪 on 20.06.2024.
 //
-//      Расширение для структуры TodoItem
-//  Содержит функцию (static func parse(json: Any) -> TodoItem?) для разбора json
-//  Содержит вычислимое свойство (var json: Any) для формирования json’а
-//  Не сохранять в json важность, если она «обычная»
-//  Не сохранять в json сложные объекты (Date)
-//  Сохранять deadline только если он задан
-//  Обязательно использовать JSONSerialization (т.е. работу со словарем)
+
 
 import Foundation
 
-extension ToDoItem {
+extension TodoItem {
     
-    static func parse(json: Any) -> ToDoItem? {
+    static func parse(json: Any) -> TodoItem? {
         guard let data = try? JSONSerialization.data(withJSONObject: json),
               let dictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+              let id = dictionary["id"] as? String,
               let text = dictionary["text"] as? String else {
             return nil
         }
         
-        var id: String
-        if let parsId = dictionary["id"] as? String {
-            id = parsId
-        } else {
-            id = UUID().uuidString
-        }
+//        let id: String = {
+//            if let parsId = dictionary["id"] as? String {
+//                 parsId
+//            } else {
+//                 UUID().uuidString
+//            }
+//        }()
         
-        var isComplete: Bool
+        let isComplete: Bool
         if let parsComplete = dictionary["isComplete"] as? Bool {
             isComplete = parsComplete
         } else {
             isComplete = false
         }
         
-        var changeDate: Date?
+        let changeDate: Date?
         if let parschangeDate = dictionary["changeDate"] as? Date? {
             changeDate = parschangeDate
         } else {
             changeDate = nil
         }
         
-        var deadline: Date?
+        let deadline: Date?
         if let parseDeadline = dictionary["deadline"] as? Date? {
             deadline = parseDeadline
         } else {
             deadline = nil
         }
         
-        var createDate: Date
+        let createDate: Date
         if let parseCreateDate = dictionary["createDate"] as? Date {
             createDate = parseCreateDate
         } else {
@@ -64,7 +60,7 @@ extension ToDoItem {
         }
     
             
-        return ToDoItem(
+        return TodoItem(
             id: id,
             text: text,
             importance: importance,

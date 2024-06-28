@@ -8,17 +8,14 @@
 import XCTest
 @testable import To_Do_App
 
-final class ToDoItemTests: XCTestCase {
+final class TodoItemTests: XCTestCase {
 
     func correctAdedItem() {
         // Given (Arrange)
-        var testItem = ToDoItem(text: "Buy some milk")
-        var cache = FileCache()
+
         
         // When (Act)
-        cache.addItem(newItem: testItem)
-        var arr = cache.ToDoItems.values
-        print(arr)
+        
         
         // Then (Assert)
     }
