@@ -71,7 +71,6 @@ struct AddItemView: View {
                     }
                     .onChange(of: deadlineEnabled) { newValue in
                         if newValue {
-                            // Устанавливаем дедлайн на следующий день после текущей даты
                             deadline = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date()
                         } else {
                             showDatePicker = false
@@ -130,8 +129,10 @@ struct AddItemView: View {
                         newTask.deadline = deadline
                     }
                     
+                    print(newTask.id)
                     fileCache.addItem(newItem: newTask)
                     presentationMode.wrappedValue.dismiss()
+                    
                 }.fontWeight(.bold)
             )
         }

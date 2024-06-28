@@ -11,8 +11,8 @@ struct ContentView: View {
     @ObservedObject var fileCache = FileCache()
     @State private var showingAddItemSheet = false
     @State private var showCompletedTasks = true
-    let filterOptions = ["Сортировать по добавлению", "Сортировать по важности"]
-    @State private var selectedFilter = "Скрыть/Показать"
+//    let filterOptions = ["Сортировать по добавлению", "Сортировать по важности"]
+//    @State private var selectedFilter = "Скрыть/Показать"
     
     
     var body: some View {
@@ -109,10 +109,12 @@ struct ContentView: View {
                             
                             Image(systemName: "chevron.right")
                         }
-                        .contentShape(Rectangle())
+                        .contentShape(Rectangle())              // make task clickable
                         .onTapGesture {
 //                            showingAddItemSheet.toggle()
                         }
+    
+                        
                         .swipeActions(edge: .leading) {
                             Button(action: {
                                 fileCache.toggleComplete(for: item.id)
@@ -138,7 +140,9 @@ struct ContentView: View {
                     }
                     
                     Button(
-                        action: { showingAddItemSheet.toggle() })
+                        action: {
+                            showingAddItemSheet.toggle()
+                        })
                     {
                         Text("Новое")
                             .foregroundStyle(.gray)
