@@ -15,7 +15,7 @@ struct AddItemView: View {
     @State private var deadlineEnabled = false
     @State private var showDatePicker = false
     @State private var deadline = Date()
-    @State private var selectedPriority: TodoItem.Importance = .unimportant
+//    @State private var selectedPriority: TodoItem.Importance = .unimportant
     @State private var selectedColor = Color.blue // Default color
 
     
@@ -121,16 +121,12 @@ struct AddItemView: View {
                         text: newItemText,
                         importance: selectedPriority,
                         createDate: Date(),
-                        isComplete: false,
-                        color: selectedColor
+                        isComplete: false
                     )
+        
                     
-                    if deadlineEnabled {
-                        newTask.deadline = deadline
-                    }
-                    
-                    print(newTask.id)
-                    fileCache.addItem(newItem: newTask)
+                
+                    fileCache.addItem(item: newTask)
                     presentationMode.wrappedValue.dismiss()
                     
                 }.fontWeight(.bold)
@@ -148,6 +144,6 @@ struct AddItemView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AddItemView(fileCache: FileCache())
     }
 }
