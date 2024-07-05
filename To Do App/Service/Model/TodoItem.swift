@@ -15,6 +15,13 @@ enum Importance: String, CaseIterable {
     case important
 }
 
+enum Category: String, CaseIterable {
+    case work = "ff1919"
+    case study = "2929ff"
+    case hobby = "20e80e"
+    case other = "1C00ff00"
+}
+
 struct TodoItem: Hashable, Identifiable {
     
     enum Keys: String, CaseIterable {
@@ -32,10 +39,11 @@ struct TodoItem: Hashable, Identifiable {
     let text: String
     let importance: Importance
     let createDate: Date
-    let isComplete: Bool
+    var isComplete: Bool
     let changeDate: Date?
     let deadline: Date?
     let color: String?
+    let category: Category
     
     init(
         id: UUID = UUID(),
@@ -45,7 +53,8 @@ struct TodoItem: Hashable, Identifiable {
         isComplete: Bool = false,
         changeDate: Date? = nil,
         deadline: Date? = nil,
-        color: String? = nil
+        color: String? = nil,
+        category: Category = .other
     ) {
         self.id = id
         self.text = text
@@ -55,6 +64,7 @@ struct TodoItem: Hashable, Identifiable {
         self.changeDate = changeDate
         self.deadline = deadline
         self.color = color
+        self.category = category
     }
     
 }

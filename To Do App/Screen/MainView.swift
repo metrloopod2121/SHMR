@@ -12,6 +12,7 @@ struct MainView: View {
     //
     @StateObject var viewModel = MainViewModel()
     @StateObject var modalView = ModalView()
+    @State private var showCalendar = false
     //
     
     var filter: some View {
@@ -124,9 +125,25 @@ struct MainView: View {
                 section
             }
             .navigationTitle("Мои дела")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: {
+                        showCalendar = true
+                    }) {
+                        Image(systemName: "calendar")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+        
+                    }
+                    .sheet(isPresented: $showCalendar) {
+                        CalendarView(viewModel: viewModel)
+                    }
+                }
+            }
             .scrollContentBackground(.hidden)
             .background(Color.primaryBG)
-        }.safeAreaInset(edge: VerticalEdge.bottom) {
+        }
+        .safeAreaInset(edge: VerticalEdge.bottom) {
             addButton
         }
     }

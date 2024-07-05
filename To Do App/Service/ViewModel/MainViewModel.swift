@@ -39,11 +39,11 @@ final class MainViewModel: ObservableObject {
         TodoItem(id: item.id, text: item.text, importance: item.importance, createDate: item.createDate, isComplete: !item.isComplete, changeDate: item.changeDate, deadline: item.deadline, color: item.color)
     }
     
-    func createNewItem(item: TodoItem?, text: String, importance: Int, deadline: Date?, color: String?) -> TodoItem {
+    func createNewItem(item: TodoItem?, text: String, importance: Int, deadline: Date?, color: String?, category: Category) -> TodoItem {
         if let item = item {
-            return TodoItem(id: item.id, text: text, importance: Importance.allCases[importance], createDate: item.createDate, isComplete: false, changeDate: Date(), deadline: deadline, color: color)
+            return TodoItem(id: item.id, text: text, importance: Importance.allCases[importance], createDate: item.createDate, isComplete: false, changeDate: Date(), deadline: deadline, color: color, category: category)
         } else {
-            return TodoItem(text: text, importance: Importance.allCases[importance], createDate: Date(), isComplete: false, changeDate: nil, deadline: deadline, color: color)
+            return TodoItem(text: text, importance: Importance.allCases[importance], createDate: Date(), isComplete: false, changeDate: nil, deadline: deadline, color: color, category: category)
         }
     }
     

@@ -27,6 +27,9 @@
 		0D37BBDC2C356FA200AA365F /* SheetMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDB2C356FA200AA365F /* SheetMod.swift */; };
 		0D37BBDE2C356FAD00AA365F /* ColorMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDD2C356FAD00AA365F /* ColorMod.swift */; };
 		0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDF2C35C30600AA365F /* TextMod.swift */; };
+		0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */; };
+		0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE32C37CA7100AA365F /* CalendarView.swift */; };
+		0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE52C37D1EB00AA365F /* CalCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		0D37BBDB2C356FA200AA365F /* SheetMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMod.swift; sourceTree = "<group>"; };
 		0D37BBDD2C356FAD00AA365F /* ColorMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMod.swift; sourceTree = "<group>"; };
 		0D37BBDF2C35C30600AA365F /* TextMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMod.swift; sourceTree = "<group>"; };
+		0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0D37BBE32C37CA7100AA365F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0D37BBE52C37D1EB00AA365F /* CalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,9 @@
 			children = (
 				0D273D932C33FA6700A62873 /* TaskView.swift */,
 				0D37BBD82C343A3000AA365F /* ColorPickerView.swift */,
+				0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */,
+				0D37BBE32C37CA7100AA365F /* CalendarView.swift */,
+				0D37BBE52C37D1EB00AA365F /* CalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -323,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */,
 				0D273D922C2EEFEB00A62873 /* Color+Components.swift in Sources */,
 				0D37BBD72C34273900AA365F /* Date+Formatter.swift in Sources */,
+				0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */,
 				0D2926EA2C231D520079272E /* MainView.swift in Sources */,
 				0D2926F92C24C7910079272E /* TodoItem.swift in Sources */,
 				0D37BBD32C340EE800AA365F /* ModalView.swift in Sources */,
@@ -335,6 +346,7 @@
 				0D2926E82C231D520079272E /* To_Do_AppApp.swift in Sources */,
 				0D273D942C33FA6700A62873 /* TaskView.swift in Sources */,
 				0D37BBD92C343A3000AA365F /* ColorPickerView.swift in Sources */,
+				0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */,
 				0D37BBD52C34109F00AA365F /* AddEditView.swift in Sources */,
 				0D37BBCF2C34094800AA365F /* MainViewModel.swift in Sources */,
 				0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */,
