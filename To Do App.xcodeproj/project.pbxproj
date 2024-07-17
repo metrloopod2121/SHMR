@@ -30,6 +30,7 @@
 		0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */; };
 		0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE32C37CA7100AA365F /* CalendarView.swift */; };
 		0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE52C37D1EB00AA365F /* CalCell.swift */; };
+		0D4ACC2D2C486BFC00F62279 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4ACC2C2C486BFC00F62279 /* NetworkingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0D37BBE32C37CA7100AA365F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		0D37BBE52C37D1EB00AA365F /* CalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCell.swift; sourceTree = "<group>"; };
+		0D4ACC2C2C486BFC00F62279 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		0D2926E62C231D520079272E /* To Do App */ = {
 			isa = PBXGroup;
 			children = (
+				0D4ACC2B2C486BDB00F62279 /* Networking */,
 				0D37BBDA2C356F9100AA365F /* Changes */,
 				0D2926E72C231D520079272E /* To_Do_AppApp.swift */,
 				0D273D952C33FB1100A62873 /* Screen */,
@@ -229,6 +232,14 @@
 				0D37BBDF2C35C30600AA365F /* TextMod.swift */,
 			);
 			path = Changes;
+			sourceTree = "<group>";
+		};
+		0D4ACC2B2C486BDB00F62279 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0D4ACC2C2C486BFC00F62279 /* NetworkingService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 				0D273D942C33FA6700A62873 /* TaskView.swift in Sources */,
 				0D37BBD92C343A3000AA365F /* ColorPickerView.swift in Sources */,
 				0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */,
+				0D4ACC2D2C486BFC00F62279 /* NetworkingService.swift in Sources */,
 				0D37BBD52C34109F00AA365F /* AddEditView.swift in Sources */,
 				0D37BBCF2C34094800AA365F /* MainViewModel.swift in Sources */,
 				0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */,

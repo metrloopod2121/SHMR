@@ -132,7 +132,7 @@ struct MainView: View {
                     }) {
                         Image(systemName: "calendar")
                             .resizable()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 25, height: 25)
         
                     }
                     .sheet(isPresented: $showCalendar) {
