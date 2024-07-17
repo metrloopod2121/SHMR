@@ -26,15 +26,17 @@
 		0D37BBD92C343A3000AA365F /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBD82C343A3000AA365F /* ColorPickerView.swift */; };
 		0D37BBDC2C356FA200AA365F /* SheetMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDB2C356FA200AA365F /* SheetMod.swift */; };
 		0D37BBDE2C356FAD00AA365F /* ColorMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDD2C356FAD00AA365F /* ColorMod.swift */; };
-		0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDF2C35C30600AA365F /* TextMod.swift */; };
-		0DB64BC32C42011200BE2D49 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB64BC22C42011200BE2D49 /* CocoaLumberjack */; };
-		0DB64BC52C42011200BE2D49 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB64BC42C42011200BE2D49 /* CocoaLumberjackSwift */; };
-		0DB64BC72C42011200BE2D49 /* CocoaLumberjackSwiftLogBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB64BC62C42011200BE2D49 /* CocoaLumberjackSwiftLogBackend */; };
-		0DB64BC92C42050200BE2D49 /* URLSession+something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB64BC82C42050200BE2D49 /* URLSession+something.swift */; };
-		7FA6E9FF4C74F4255A503265 /* Pods_To_Do_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923409A0FF1E4833B878D628 /* Pods_To_Do_App.framework */; };
-		C38FDA6EF58E35529DBD9C2E /* Pods_To_Do_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06B2112EAA8ED90F4E0DCC /* Pods_To_Do_AppTests.framework */; };
+                0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDF2C35C30600AA365F /* TextMod.swift */; };
+                0DB64BC32C42011200BE2D49 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB64BC22C42011200BE2D49 /* CocoaLumberjack */; };
+                0DB64BC52C42011200BE2D49 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB64BC42C42011200BE2D49 /* CocoaLumberjackSwift */; };
+                0DB64BC72C42011200BE2D49 /* CocoaLumberjackSwiftLogBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 0DB64BC62C42011200BE2D49 /* CocoaLumberjackSwiftLogBackend */; };
+                0DB64BC92C42050200BE2D49 /* URLSession+something.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB64BC82C42050200BE2D49 /* URLSession+something.swift */; };
+                7FA6E9FF4C74F4255A503265 /* Pods_To_Do_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923409A0FF1E4833B878D628 /* Pods_To_Do_App.framework */; };
+                C38FDA6EF58E35529DBD9C2E /* Pods_To_Do_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06B2112EAA8ED90F4E0DCC /* Pods_To_Do_AppTests.framework */; };
+                0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */; };
+                0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE32C37CA7100AA365F /* CalendarView.swift */; };
+                0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE52C37D1EB00AA365F /* CalCell.swift */; };
 /* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		0D2927092C259FD80079272E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -68,6 +70,7 @@
 		0D37BBDB2C356FA200AA365F /* SheetMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMod.swift; sourceTree = "<group>"; };
 		0D37BBDD2C356FAD00AA365F /* ColorMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMod.swift; sourceTree = "<group>"; };
 		0D37BBDF2C35C30600AA365F /* TextMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMod.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		0DB64BC82C42050200BE2D49 /* URLSession+something.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+something.swift"; sourceTree = "<group>"; };
 		184BB97582697CDF4E40359F /* Pods-To Do AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do AppTests.debug.xcconfig"; path = "Target Support Files/Pods-To Do AppTests/Pods-To Do AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2518E19248573930363FF254 /* Pods-To Do App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do App.debug.xcconfig"; path = "Target Support Files/Pods-To Do App/Pods-To Do App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +78,11 @@
 		923409A0FF1E4833B878D628 /* Pods_To_Do_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB76478C0B9EAFDD6299654E /* Pods-To Do AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do AppTests.release.xcconfig"; path = "Target Support Files/Pods-To Do AppTests/Pods-To Do AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BC06B2112EAA8ED90F4E0DCC /* Pods_To_Do_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+=======
+		0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0D37BBE32C37CA7100AA365F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0D37BBE52C37D1EB00AA365F /* CalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCell.swift; sourceTree = "<group>"; };
+>>>>>>> 3d7ceb81cec41ba5a0b68513d781a43e1492a51e
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,9 @@
 			children = (
 				0D273D932C33FA6700A62873 /* TaskView.swift */,
 				0D37BBD82C343A3000AA365F /* ColorPickerView.swift */,
+				0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */,
+				0D37BBE32C37CA7100AA365F /* CalendarView.swift */,
+				0D37BBE52C37D1EB00AA365F /* CalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,8 +451,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */,
 				0D273D922C2EEFEB00A62873 /* Color+Components.swift in Sources */,
 				0D37BBD72C34273900AA365F /* Date+Formatter.swift in Sources */,
+				0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */,
 				0D2926EA2C231D520079272E /* MainView.swift in Sources */,
 				0D2926F92C24C7910079272E /* TodoItem.swift in Sources */,
 				0D37BBD32C340EE800AA365F /* ModalView.swift in Sources */,
@@ -453,6 +466,7 @@
 				0D2926E82C231D520079272E /* To_Do_AppApp.swift in Sources */,
 				0D273D942C33FA6700A62873 /* TaskView.swift in Sources */,
 				0D37BBD92C343A3000AA365F /* ColorPickerView.swift in Sources */,
+				0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */,
 				0D37BBD52C34109F00AA365F /* AddEditView.swift in Sources */,
 				0D37BBCF2C34094800AA365F /* MainViewModel.swift in Sources */,
 				0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */,

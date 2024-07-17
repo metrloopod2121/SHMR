@@ -29,6 +29,9 @@ struct AddEditView: View {
     var currentColorHex: String {
         currentColor.hexComponentsString()
     }
+//    @State var categoryOfItem: Category = .work
+    @State private var categoryOfItem: Int = 3
+    let categories: [Int: String] = [0: Category.work.rawValue, 1: Category.study.rawValue, 2: Category.hobby.rawValue, 3: Category.other.rawValue]
     
     
     // MARK: Item's Text Field
@@ -75,7 +78,6 @@ struct AddEditView: View {
                 Image(systemName: "exclamationmark.2").tag(2)
                     .foregroundStyle(.red, .blue)
             }
-            
             .onChange(of: selectedImportance) {
                 isDisabledSave = checkIsDisabledToSave()
             }
@@ -102,7 +104,7 @@ struct AddEditView: View {
         }
         
     }
-    
+
     
     var toggleDeadline: some View {
         Toggle("", isOn: $showDate).onReceive([showDate].publisher.first(), perform: { value in
@@ -165,6 +167,18 @@ struct AddEditView: View {
         )
     }
     
+    var categoryPicker: some View {
+        HStack(alignment: .center) {
+            Text("Выбери категорию")
+            Spacer()
+            Picker("", selection: $categoryOfItem) {
+                Text("Работа").tag(0)
+                Text("Учёба").tag(1)
+                Text("Хобби").tag(2)
+                Text("Другое").tag(3)
+            }
+        }
+    }
     
     var settings: some View {
         VStack {
@@ -172,15 +186,14 @@ struct AddEditView: View {
                 importancePicker
                 Divider()
                 colorPicker
-//                if showPicker {
-//                    ColorPickerView(chosenColor: $currentColor)
-//                }
-//                Divider()
+                Divider()
                 deadlineSection
                 if showCalendar {
                     Divider()
                     datePicker
                 }
+                Divider()
+                categoryPicker
             }
             .padding([.top, .bottom], 10)
             .padding([.leading, .trailing], 16)
@@ -191,7 +204,6 @@ struct AddEditView: View {
             deleteButton
         }
     }
-    
 
     
     var body: some View {
@@ -210,7 +222,14 @@ struct AddEditView: View {
                     Button("Сохранить") {
                         let deadline = showDate ? deadline : nil
                         let color = showColor ? currentColorHex : nil
-                        viewModel.updateItem(item: viewModel.createNewItem(item: modalView.selectedItem, text: text, importance: selectedImportance, deadline: deadline, color: color))
+                        viewModel.updateItem(
+                            item: viewModel.createNewItem(
+                                item: modalView.selectedItem,
+                                text: text,
+                                importance: selectedImportance,
+                                deadline: deadline,
+                                color: color,
+                                category: Category(rawValue: categories[categoryOfItem]!)!))
                         modalView.activateModalView = false
                     }.disabled(isDisabledSave)
                 }
