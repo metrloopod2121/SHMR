@@ -7,7 +7,10 @@ target 'To Do App' do
 
   # Pods for To Do App
   pod 'SwiftLint'
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/homework5
 
   target 'To Do AppTests' do
     inherit! :search_paths
