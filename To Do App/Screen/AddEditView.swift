@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CocoaLumberjack
 
 struct AddEditView: View {
     @ObservedObject var modalView: ModalView
@@ -241,6 +242,13 @@ struct AddEditView: View {
             .background(Color.primaryBG)
 
         }
+//        .onAppear {
+//            DDLog("AddEditView appeared")
+//            
+//        }
+//        .onDisappear {
+//            DDLog("AddEditView disappeared")
+//        }
         .onReceive(modalView.$selectedItem) { selectedItem in
             if selectedItem == nil {
                 isDisabledDelete = true
@@ -255,6 +263,7 @@ struct AddEditView: View {
                 self.deadline = deadline
                 showDate = true
             }
+            
         }
         .onChange(of: text) {
             isDisabledSave = checkIsDisabledToSave()
