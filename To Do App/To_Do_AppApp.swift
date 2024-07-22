@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Foundation
+import CocoaLumberjackSwift
+
 
 @main
 struct To_Do_AppApp: App {

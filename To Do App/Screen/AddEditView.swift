@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CocoaLumberjackSwift
 
 struct AddEditView: View {
     @ObservedObject var modalView: ModalView
