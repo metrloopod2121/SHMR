@@ -236,29 +236,6 @@ class CalendarViewController: UIViewController, UICollectionViewDataSource, UICo
     }
 
     // MARK: - UIScrollViewDelegate
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView == calendarCollectionView {
-            guard !isScrollingTasks else { return }
-            isScrollingCalendar = true
-            syncTasksWithCalendarScroll()
-            isScrollingCalendar = false
-        } else if scrollView == tasksTableView {
-            guard !isScrollingCalendar else { return }
-            isScrollingTasks = true
-            syncCalendarWithTasksScroll()
-            isScrollingTasks = false
-        }
-    }
-
-    private func syncTasksWithCalendarScroll() {
-        // Найдем ближайшую видимую ячейку календаря
-        let visibleCells = calendarCollectionView.indexPathsForVisibleItems
-        guard let firstVisibleCellIndexPath = visibleCells.sorted().first else { return }
-        
-        let deadline = deadlines[firstVisibleCellIndexPath.item]
-        scrollToSection(for: deadline)
-    }
 
     private func syncCalendarWithTasksScroll() {
         // Найдем ближайшую видимую секцию в списке задач
