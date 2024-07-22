@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D273D922C2EEFEB00A62873 /* ColorComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D273D912C2EEFEB00A62873 /* ColorComponents.swift */; };
+		0D273D922C2EEFEB00A62873 /* Color+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D273D912C2EEFEB00A62873 /* Color+Components.swift */; };
+		0D273D942C33FA6700A62873 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D273D932C33FA6700A62873 /* TaskView.swift */; };
 		0D2926E82C231D520079272E /* To_Do_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2926E72C231D520079272E /* To_Do_AppApp.swift */; };
-		0D2926EA2C231D520079272E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2926E92C231D520079272E /* ContentView.swift */; };
+		0D2926EA2C231D520079272E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2926E92C231D520079272E /* MainView.swift */; };
 		0D2926EC2C231D540079272E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D2926EB2C231D540079272E /* Assets.xcassets */; };
 		0D2926EF2C231D540079272E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D2926EE2C231D540079272E /* Preview Assets.xcassets */; };
 		0D2926F62C24C0000079272E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D2926F52C24C0000079272E /* data.json */; };
 		0D2926F92C24C7910079272E /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2926F82C24C7910079272E /* TodoItem.swift */; };
-		0D2926FC2C24CAFD0079272E /* ParsingJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2926FB2C24CAFD0079272E /* ParsingJSON.swift */; };
+		0D2926FC2C24CAFD0079272E /* TodoItem+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2926FB2C24CAFD0079272E /* TodoItem+JSON.swift */; };
 		0D2927082C259FD80079272E /* To_Do_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2927072C259FD80079272E /* To_Do_AppTests.swift */; };
 		0D29270F2C25A81E0079272E /* TodoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D29270E2C25A81E0079272E /* TodoItemTests.swift */; };
 		0D2927122C2AE36E0079272E /* FileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2927112C2AE36E0079272E /* FileCache.swift */; };
-		0D2927142C2AF4C30079272E /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2927132C2AF4C30079272E /* AddItemView.swift */; };
+		0D37BBCF2C34094800AA365F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBCE2C34094800AA365F /* MainViewModel.swift */; };
+		0D37BBD32C340EE800AA365F /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBD22C340EE800AA365F /* ModalView.swift */; };
+		0D37BBD52C34109F00AA365F /* AddEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBD42C34109F00AA365F /* AddEditView.swift */; };
+		0D37BBD72C34273900AA365F /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBD62C34273900AA365F /* Date+Formatter.swift */; };
+		0D37BBD92C343A3000AA365F /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBD82C343A3000AA365F /* ColorPickerView.swift */; };
+		0D37BBDC2C356FA200AA365F /* SheetMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDB2C356FA200AA365F /* SheetMod.swift */; };
+		0D37BBDE2C356FAD00AA365F /* ColorMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDD2C356FAD00AA365F /* ColorMod.swift */; };
+		0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBDF2C35C30600AA365F /* TextMod.swift */; };
+		0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */; };
+		0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE32C37CA7100AA365F /* CalendarView.swift */; };
+		0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D37BBE52C37D1EB00AA365F /* CalCell.swift */; };
+		6AEAD06DD603746459BF1E02 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		9D368FDEFB70F04B1AE69D39 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		BE63FC7DCFA7A7BC29A37616 /* Pods_To_Do_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289AB09CFBAB4CA8A25EF3B0 /* Pods_To_Do_AppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,20 +46,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D273D912C2EEFEB00A62873 /* ColorComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorComponents.swift; sourceTree = "<group>"; };
+		0D273D912C2EEFEB00A62873 /* Color+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Components.swift"; sourceTree = "<group>"; };
+		0D273D932C33FA6700A62873 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		0D2926E42C231D520079272E /* To Do App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To Do App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2926E72C231D520079272E /* To_Do_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_AppApp.swift; sourceTree = "<group>"; };
-		0D2926E92C231D520079272E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D2926E92C231D520079272E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0D2926EB2C231D540079272E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D2926EE2C231D540079272E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D2926F52C24C0000079272E /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		0D2926F82C24C7910079272E /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		0D2926FB2C24CAFD0079272E /* ParsingJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingJSON.swift; sourceTree = "<group>"; };
+		0D2926FB2C24CAFD0079272E /* TodoItem+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+JSON.swift"; sourceTree = "<group>"; };
 		0D2927052C259FD80079272E /* To Do AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To Do AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2927072C259FD80079272E /* To_Do_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_Do_AppTests.swift; sourceTree = "<group>"; };
 		0D29270E2C25A81E0079272E /* TodoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTests.swift; sourceTree = "<group>"; };
 		0D2927112C2AE36E0079272E /* FileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCache.swift; sourceTree = "<group>"; };
-		0D2927132C2AF4C30079272E /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		0D37BBCE2C34094800AA365F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0D37BBD22C340EE800AA365F /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		0D37BBD42C34109F00AA365F /* AddEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditView.swift; sourceTree = "<group>"; };
+		0D37BBD62C34273900AA365F /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		0D37BBD82C343A3000AA365F /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		0D37BBDB2C356FA200AA365F /* SheetMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetMod.swift; sourceTree = "<group>"; };
+		0D37BBDD2C356FAD00AA365F /* ColorMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMod.swift; sourceTree = "<group>"; };
+		0D37BBDF2C35C30600AA365F /* TextMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMod.swift; sourceTree = "<group>"; };
+		0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0D37BBE32C37CA7100AA365F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0D37BBE52C37D1EB00AA365F /* CalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalCell.swift; sourceTree = "<group>"; };
+		0DB64BC82C42050200BE2D49 /* URLSession+something.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+something.swift"; sourceTree = "<group>"; };
+		289AB09CFBAB4CA8A25EF3B0 /* Pods_To_Do_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C259B2DCC2A3093F6A844C87 /* Pods-To Do AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do AppTests.debug.xcconfig"; path = "Target Support Files/Pods-To Do AppTests/Pods-To Do AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5A310A8E74FAB209278B56C /* Pods-To Do App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do App.debug.xcconfig"; path = "Target Support Files/Pods-To Do App/Pods-To Do App.debug.xcconfig"; sourceTree = "<group>"; };
+		DC7447611A7C01B3AAAF9FAD /* Pods-To Do AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do AppTests.release.xcconfig"; path = "Target Support Files/Pods-To Do AppTests/Pods-To Do AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E713F18F5BEBFA485E7681EA /* Pods-To Do App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do App.release.xcconfig"; path = "Target Support Files/Pods-To Do App/Pods-To Do App.release.xcconfig"; sourceTree = "<group>"; };
+		FB77E05B3FCE92A7C9BF01BD /* Pods_To_Do_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D368FDEFB70F04B1AE69D39 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,18 +93,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AEAD06DD603746459BF1E02 /* (null) in Frameworks */,
+				BE63FC7DCFA7A7BC29A37616 /* Pods_To_Do_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D273D952C33FB1100A62873 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0D2926E92C231D520079272E /* MainView.swift */,
+				0D37BBD42C34109F00AA365F /* AddEditView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		0D2926DB2C231D520079272E = {
 			isa = PBXGroup;
 			children = (
 				0D2926E62C231D520079272E /* To Do App */,
+				81430E02503BA4962CAE9C40 /* Pods */,
 				0D2927062C259FD80079272E /* To Do AppTests */,
 				0D2926E52C231D520079272E /* Products */,
+				57AD51AC023F5944A3F9FD15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,11 +133,11 @@
 		0D2926E62C231D520079272E /* To Do App */ = {
 			isa = PBXGroup;
 			children = (
-				0D2926F52C24C0000079272E /* data.json */,
+				0D37BBDA2C356F9100AA365F /* Changes */,
 				0D2926E72C231D520079272E /* To_Do_AppApp.swift */,
-				0D2926E92C231D520079272E /* ContentView.swift */,
+				0D273D952C33FB1100A62873 /* Screen */,
+				0D37BBCB2C34090700AA365F /* Service */,
 				0D2927152C2AF4E10079272E /* Views */,
-				0D2926F72C24C7870079272E /* Model */,
 				0D2926FA2C24CAD20079272E /* Extensions */,
 				0D2927102C25ABA00079272E /* Resources */,
 				0D2926ED2C231D540079272E /* Preview Content */,
@@ -112,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				0D2926F82C24C7910079272E /* TodoItem.swift */,
-				0D2927112C2AE36E0079272E /* FileCache.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,8 +165,10 @@
 		0D2926FA2C24CAD20079272E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0D2926FB2C24CAFD0079272E /* ParsingJSON.swift */,
-				0D273D912C2EEFEB00A62873 /* ColorComponents.swift */,
+				0D2926FB2C24CAFD0079272E /* TodoItem+JSON.swift */,
+				0D273D912C2EEFEB00A62873 /* Color+Components.swift */,
+				0D37BBD62C34273900AA365F /* Date+Formatter.swift */,
+				0DB64BC82C42050200BE2D49 /* URLSession+something.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +193,7 @@
 		0D2927102C25ABA00079272E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D2926F52C24C0000079272E /* data.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -153,9 +201,70 @@
 		0D2927152C2AF4E10079272E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0D2927132C2AF4C30079272E /* AddItemView.swift */,
+				0D273D932C33FA6700A62873 /* TaskView.swift */,
+				0D37BBD82C343A3000AA365F /* ColorPickerView.swift */,
+				0D37BBE12C37CA3E00AA365F /* CalendarViewController.swift */,
+				0D37BBE32C37CA7100AA365F /* CalendarView.swift */,
+				0D37BBE52C37D1EB00AA365F /* CalCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0D37BBCB2C34090700AA365F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0D37BBCD2C34093400AA365F /* ViewModel */,
+				0D37BBCC2C34092800AA365F /* FileCache */,
+				0D2926F72C24C7870079272E /* Model */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0D37BBCC2C34092800AA365F /* FileCache */ = {
+			isa = PBXGroup;
+			children = (
+				0D2927112C2AE36E0079272E /* FileCache.swift */,
+			);
+			path = FileCache;
+			sourceTree = "<group>";
+		};
+		0D37BBCD2C34093400AA365F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D37BBCE2C34094800AA365F /* MainViewModel.swift */,
+				0D37BBD22C340EE800AA365F /* ModalView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D37BBDA2C356F9100AA365F /* Changes */ = {
+			isa = PBXGroup;
+			children = (
+				0D37BBDB2C356FA200AA365F /* SheetMod.swift */,
+				0D37BBDD2C356FAD00AA365F /* ColorMod.swift */,
+				0D37BBDF2C35C30600AA365F /* TextMod.swift */,
+			);
+			path = Changes;
+			sourceTree = "<group>";
+		};
+		57AD51AC023F5944A3F9FD15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB77E05B3FCE92A7C9BF01BD /* Pods_To_Do_App.framework */,
+				289AB09CFBAB4CA8A25EF3B0 /* Pods_To_Do_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81430E02503BA4962CAE9C40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5A310A8E74FAB209278B56C /* Pods-To Do App.debug.xcconfig */,
+				E713F18F5BEBFA485E7681EA /* Pods-To Do App.release.xcconfig */,
+				C259B2DCC2A3093F6A844C87 /* Pods-To Do AppTests.debug.xcconfig */,
+				DC7447611A7C01B3AAAF9FAD /* Pods-To Do AppTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +274,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D2926F22C231D540079272E /* Build configuration list for PBXNativeTarget "To Do App" */;
 			buildPhases = (
+				B51D223851D039BB288518EC /* [CP] Check Pods Manifest.lock */,
+				0D73D1642C4A709000AD0AFA /* ShellScript */,
 				0D2926E02C231D520079272E /* Sources */,
 				0D2926E12C231D520079272E /* Frameworks */,
 				0D2926E22C231D520079272E /* Resources */,
@@ -174,6 +285,8 @@
 			dependencies = (
 			);
 			name = "To Do App";
+			packageProductDependencies = (
+			);
 			productName = "To Do App";
 			productReference = 0D2926E42C231D520079272E /* To Do App.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +295,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D29270B2C259FD80079272E /* Build configuration list for PBXNativeTarget "To Do AppTests" */;
 			buildPhases = (
+				B23AD05F145F12CC7C74DAC2 /* [CP] Check Pods Manifest.lock */,
 				0D2927012C259FD80079272E /* Sources */,
 				0D2927022C259FD80079272E /* Frameworks */,
 				0D2927032C259FD80079272E /* Resources */,
@@ -224,6 +338,9 @@
 				Base,
 			);
 			mainGroup = 0D2926DB2C231D520079272E;
+			packageReferences = (
+				0D73D1652C4A70E800AD0AFA /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
 			productRefGroup = 0D2926E52C231D520079272E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,18 +371,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D73D1642C4A709000AD0AFA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftlint.yml",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+		B23AD05F145F12CC7C74DAC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-To Do AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B51D223851D039BB288518EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-To Do App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D2926E02C231D520079272E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D273D922C2EEFEB00A62873 /* ColorComponents.swift in Sources */,
-				0D2926EA2C231D520079272E /* ContentView.swift in Sources */,
+				0D37BBE22C37CA3E00AA365F /* CalendarViewController.swift in Sources */,
+				0D273D922C2EEFEB00A62873 /* Color+Components.swift in Sources */,
+				0D37BBD72C34273900AA365F /* Date+Formatter.swift in Sources */,
+				0D37BBE42C37CA7100AA365F /* CalendarView.swift in Sources */,
+				0D2926EA2C231D520079272E /* MainView.swift in Sources */,
 				0D2926F92C24C7910079272E /* TodoItem.swift in Sources */,
-				0D2927142C2AF4C30079272E /* AddItemView.swift in Sources */,
-				0D2926FC2C24CAFD0079272E /* ParsingJSON.swift in Sources */,
+				0D37BBD32C340EE800AA365F /* ModalView.swift in Sources */,
+				0D2926FC2C24CAFD0079272E /* TodoItem+JSON.swift in Sources */,
+				0D37BBDE2C356FAD00AA365F /* ColorMod.swift in Sources */,
 				0D2927122C2AE36E0079272E /* FileCache.swift in Sources */,
+				0D37BBDC2C356FA200AA365F /* SheetMod.swift in Sources */,
 				0D2926E82C231D520079272E /* To_Do_AppApp.swift in Sources */,
+				0D273D942C33FA6700A62873 /* TaskView.swift in Sources */,
+				0D37BBD92C343A3000AA365F /* ColorPickerView.swift in Sources */,
+				0D37BBE62C37D1EB00AA365F /* CalCell.swift in Sources */,
+				0D37BBD52C34109F00AA365F /* AddEditView.swift in Sources */,
+				0D37BBCF2C34094800AA365F /* MainViewModel.swift in Sources */,
+				0D37BBE02C35C30600AA365F /* TextMod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +603,20 @@
 		};
 		0D2926F32C231D540079272E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5A310A8E74FAB209278B56C /* Pods-To Do App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"To Do App/Preview Content\"";
 				DEVELOPMENT_TEAM = 3V83G95RA5;
 				ENABLE_PREVIEWS = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PODS_ROOT)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -431,6 +630,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "SHMR.To-Do-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,9 +639,11 @@
 		};
 		0D2926F42C231D540079272E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E713F18F5BEBFA485E7681EA /* Pods-To Do App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"To Do App/Preview Content\"";
@@ -460,6 +662,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "SHMR.To-Do-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,6 +671,7 @@
 		};
 		0D29270C2C259FD80079272E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C259B2DCC2A3093F6A844C87 /* Pods-To Do AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +690,7 @@
 		};
 		0D29270D2C259FD80079272E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC7447611A7C01B3AAAF9FAD /* Pods-To Do AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +738,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0D73D1652C4A70E800AD0AFA /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.8.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0D2926DC2C231D520079272E /* Project object */;
 }
